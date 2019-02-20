@@ -1,0 +1,6 @@
+- id: "devotion.created.success"
+  translation: "Devotion was successfully created."
+- id: "devotion.updated.success"
+  translation: "Devotion was successfully updated."
+- id: "devotion.destroyed.success"
+  translation: "Devotion was successfully destroyed."

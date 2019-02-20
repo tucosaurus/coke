@@ -1,0 +1,10 @@
+<div class="page-header">
+  <h1>Devotion#Show</h1>
+</div>
+
+<ul class="list-unstyled list-inline">
+  <li class="list-inline-item"><a href="<%= devotionsPath() %>" class="btn btn-info">Back to all Devotions</a></li>
+  <li class="list-inline-item"><a href="<%= editDevotionPath({ devotion_id: devotion.ID })%>" class="btn btn-warning">Edit</a></li>
+  <li class="list-inline-item"><a href="<%= devotionPath({ devotion_id: devotion.ID })%>" data-method="DELETE" data-confirm="Are you sure?" class="btn btn-danger">Destroy</a>
+</ul>
+
