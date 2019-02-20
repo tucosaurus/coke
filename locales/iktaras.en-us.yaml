@@ -1,0 +1,6 @@
+- id: "iktara.created.success"
+  translation: "Iktara was successfully created."
+- id: "iktara.updated.success"
+  translation: "Iktara was successfully updated."
+- id: "iktara.destroyed.success"
+  translation: "Iktara was successfully destroyed."

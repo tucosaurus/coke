@@ -1,0 +1,8 @@
+<div class="page-header">
+  <h1>Edit Iktara</h1>
+</div>
+
+<%= form_for(iktara, {action: iktaraPath({ iktara_id: iktara.ID }), method: "PUT"}) { %>
+  <%= partial("iktaras/form.html") %>
+  <a href="<%= iktaraPath({ iktara_id: iktara.ID }) %>" class="btn btn-warning" data-confirm="Are you sure?">Cancel</a>
+<% } %>

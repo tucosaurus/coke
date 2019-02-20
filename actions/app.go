@@ -63,7 +63,9 @@ func App() *buffalo.App {
 		app.GET("/test/json/wer", TestJsonHandler)
 
 		app.GET("/layla/show", LaylaShow)
-		app.Resource("/devotions", DevotionsResource{})
+		d := app.Resource("/devotions", DevotionsResource{})
+		d.Resource("/iktaras", IktarasResource{})
+
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}
 

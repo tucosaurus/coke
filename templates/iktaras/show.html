@@ -1,0 +1,22 @@
+<div class="page-header">
+  <h1>Iktara#Show</h1>
+</div>
+
+<ul class="list-unstyled list-inline">
+  <li class="list-inline-item"><a href="<%= iktarasPath() %>" class="btn btn-info">Back to all Iktaras</a></li>
+  <li class="list-inline-item"><a href="<%= editIktaraPath({ iktara_id: iktara.ID })%>" class="btn btn-warning">Edit</a></li>
+  <li class="list-inline-item"><a href="<%= iktaraPath({ iktara_id: iktara.ID })%>" data-method="DELETE" data-confirm="Are you sure?" class="btn btn-danger">Destroy</a>
+</ul>
+
+<p>
+  <strong>Title</strong>: <%= iktara.Title %>
+</p>
+<p>
+  <strong>Description</strong>: <%= iktara.Description %>
+</p>
+<p>
+  <strong>Time</strong>: <%= iktara.Time %>
+</p>
+<p>
+  <strong>RandomField</strong>: <%= iktara.RandomField %>
+</p>
