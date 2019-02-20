@@ -59,6 +59,8 @@ func App() *buffalo.App {
 		app.Use(translations())
 
 		app.GET("/", HomeHandler)
+		app.GET("/test/{name}", TestQueryParamHandler)
+		app.GET("/test/json/wer", TestJsonHandler)
 
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}
