@@ -33,6 +33,18 @@ var T *i18n.Translator
 // `ServeFiles` is a CATCH-ALL route, so it should always be
 // placed last in the route declarations, as it will prevent routes
 // declared after it to never be called.
+
+func MyMiddleware(next buffalo.Handler) buffalo.Handler {
+	return func(c buffalo.Context) error {
+		// do some work before calling the next handler
+		print("Middleware running before the handler \n")
+		err := next(c)
+		// do some work after calling the next handler
+		print("Middleware running after 123123123 the handler \n")
+		return err
+	}
+}
+
 func App() *buffalo.App {
 	if app == nil {
 		app = buffalo.New(buffalo.Options{
@@ -57,6 +69,8 @@ func App() *buffalo.App {
 
 		// Setup and use translations:
 		app.Use(translations())
+
+		app.Use(MyMiddleware)
 
 		app.GET("/", HomeHandler)
 		app.GET("/test/{name}", TestQueryParamHandler)

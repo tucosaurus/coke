@@ -49,4 +49,18 @@ ALTER ROLE dev CREATEDB;
         d := app.Resource("/devotions", DevotionsResource{})
 		d.Resource("/iktaras", IktarasResource{})
         ```
-- 
+
+
+# Context
+- The heart of buffalo
+
+# Request Binding
+- bind request object to a struct according to the content type.
+
+# Middlewares
+- Inject code in the request response cycle. Like, authentication 
+
+# Database
+- write migrations by hand
+- pop has a dsl
+- `buffalo db`
